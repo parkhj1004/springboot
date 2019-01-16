@@ -1,0 +1,48 @@
+
+
+spring:
+  datasource:
+#    somedb:
+    driver-class-name: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
+    url:
+    jdbc-url:
+    username:
+    password:
+#    pool-name: hikari-cp
+#    minimum-idle: 10
+#    maximum-pool-size: 30
+    connection-test-query: SELECT 1
+#      validation-query: select 1
+#      test-on-borrow: true
+#      validation-interval: 10000
+#      default-auto-commit: true
+#      pool-prepared-statements: true
+#      initial-size: 1
+#      max-active: 3
+#      max-idle: 3
+#      min-idle: 3
+#      max-wait: 3000
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        ddl-auto: validate
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#    generate-ddl: true
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: DEBUG
+#        type:
+#          descriptor:
+#            sql:
+#              BasicBinder: TRACE
