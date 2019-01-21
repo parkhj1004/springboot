@@ -17,6 +17,8 @@ public class JpaApplicationTests {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private com.mapper.testMapper testMapper;
 
     @Test
     @Transactional
@@ -28,6 +30,12 @@ public class JpaApplicationTests {
         user.setEmail("test@gmail.com");
         user.setCreatedAt(LocalDateTime.now());
         userRepository.save(user);
+    }
+
+    @Test
+    @Transactional
+    public void testCreateUser() {
+        testMapper.insertUser();
     }
 }
 
