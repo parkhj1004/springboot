@@ -4,7 +4,7 @@
 <mapper namespace="com.mapper.testMapper">
 
     <insert id="insertUser">
-        INSERT INTO user (createdAt , email, name)
-        VALUES (now() , 'parkhj@gmail.com' , 'parkhj')
+        INSERT INTO users (createdAt , email, name)
+        VALUES (now() , 'parkhj@gmail.com' , 'parkhj3')
     </insert>
 </mapper>

@@ -26,7 +26,7 @@ public class JpaApplicationTests {
     public void createUser() {
 
         User user = new User();
-        user.setName("test");
+        user.setName("test2");
         user.setEmail("test@gmail.com");
         user.setCreatedAt(LocalDateTime.now());
         userRepository.save(user);
