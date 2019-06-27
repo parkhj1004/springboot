@@ -8,28 +8,27 @@ import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
 @Configuration
-//@EnableTransactionManagement
-@EnableJpaRepositories(
-        basePackages = {"com.jpa.demo.config"}
-        , repositoryBaseClass = JpaConfig.class
-        ,entityManagerFactoryRef = "entityManagerFactory"
-        ,transactionManagerRef = "transactionManager"
-)
+@EnableTransactionManagement
+//@EnableJpaRepositories(
+//        basePackages = {"com.jpa"}
+//        , repositoryBaseClass = JpaConfig.class
+//        ,entityManagerFactoryRef = "entityManagerFactory"
+//        ,transactionManagerRef = "transactionManager"
+//)
 public class JpaConfig {
 
-
     @Bean("dataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.jpadbinfo")
+    @ConfigurationProperties("spring.datasource.somedb")
     @Primary
     public DataSource dataSource() throws SQLException {
 
@@ -52,7 +51,7 @@ public class JpaConfig {
 //    @Primary
     @Bean(name = "transactionManager")
 //    @Bean("transactionManagerJpa")
-    @Primary
+//    @Primary
     public PlatformTransactionManager transactionManager(
 
             @Qualifier("entityManagerFactory") EntityManagerFactory entityManagerFactory) {

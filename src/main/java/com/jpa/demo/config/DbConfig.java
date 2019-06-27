@@ -29,7 +29,7 @@ import java.sql.SQLException;
 public class DbConfig {
 
     @Bean("dataSource_")
-    @ConfigurationProperties(prefix = "spring.datasource.dbinfo")
+    @ConfigurationProperties(prefix = "spring.datasource.somedb2")
 //    @Primary
     public DataSource dataSource() throws SQLException {
 
