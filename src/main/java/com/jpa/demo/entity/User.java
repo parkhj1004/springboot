@@ -1,4 +1,4 @@
-package com.jpa.demo;
+package com.jpa.demo.entity;
 
 import lombok.Data;
 

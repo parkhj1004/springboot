@@ -1,6 +1,7 @@
 package com.jpa.demo;
 
 import com.jpa.demo.config.UserRepository;
+import com.jpa.demo.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
