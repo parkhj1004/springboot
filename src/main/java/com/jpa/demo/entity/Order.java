@@ -1,5 +1,6 @@
 package com.jpa.demo.entity;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.ibatis.annotations.One;
@@ -13,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Table(name="orders")
-public class Order {
+public class Order extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "order_id")
