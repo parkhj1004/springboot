@@ -1,4 +1,4 @@
-package com.jpa.demo;
+package com.jpa.demo.entity;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     @Id

@@ -1,35 +1,25 @@
-
-
 spring:
   datasource:
-#    somedb:
-    driver-class-name: com.mysql.jdbc.Driver
-    driverClassName: com.mysql.jdbc.Driver
-    url:
-    jdbc-url:
-    username:
-    password:
-#    pool-name: hikari-cp
-#    minimum-idle: 10
-#    maximum-pool-size: 30
-    connection-test-query: SELECT 1
-#      validation-query: select 1
-#      test-on-borrow: true
-#      validation-interval: 10000
-#      default-auto-commit: true
-#      pool-prepared-statements: true
-#      initial-size: 1
-#      max-active: 3
-#      max-idle: 3
-#      min-idle: 3
-#      max-wait: 3000
+    jpadbinfo:
+      jdbc-url: jdbc:postgresql://localhost:5432/postgres
+      driver-class-name: org.postgresql.Driver
+      username: parkhj
+      password: parkhj
+      connection-test-query: SELECT * from users
+    somedb2:
+      jdbc-url: jdbc:postgresql://localhost:5432/postgres
+      driver-class-name: org.postgresql.Driver
+      username: parkhj
+      password: parkhj
+      connection-test-query: SELECT * from users
   jpa:
     show-sql: true
     generate-ddl: true
-    properties:
-      hibernate:
-        ddl-auto: validate
-#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: create
+#    hibernate:
+#      dialec: org.hibernate.dialect.PostgreSQL94Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 #    hibernate:
 #      ddl-auto: update
 #    show-sql: true
@@ -37,12 +27,12 @@ spring:
 #      hibernate:
 #        format_sql: true
 #    generate-ddl: true
-#logging:
-#  level:
-#    org:
-#      hibernate:
-#        SQL: DEBUG
-#        type:
-#          descriptor:
-#            sql:
-#              BasicBinder: TRACE
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
