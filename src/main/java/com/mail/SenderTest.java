@@ -9,7 +9,7 @@ public class SenderTest {
 
         SenderDto dto = SenderDto.builder()
                 .from("hyojinpark.world@gmail.com")
-                .to(Lists.newArrayList("d8003062@gmail.com"))
+                .to(Lists.newArrayList("d8003062@naver.com"))
                 .subject("테스트")
                 .content("안녕하세요")
                 .build();
