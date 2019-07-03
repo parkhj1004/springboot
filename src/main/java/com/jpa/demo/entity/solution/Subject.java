@@ -2,12 +2,13 @@ package com.jpa.demo.entity.solution;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
 @NoArgsConstructor
 public class Subject {
 

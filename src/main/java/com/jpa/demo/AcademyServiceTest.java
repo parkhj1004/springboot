@@ -41,7 +41,8 @@ public class AcademyServiceTest {
         teacherRepository.deleteAll();
     }
 
-    @Before
+//    @Before
+    @Test
     public void setup() {
         List<Academy> academies = new ArrayList<>();
         Teacher teacher = teacherRepository.save(new Teacher("선생님"));

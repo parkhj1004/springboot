@@ -2,6 +2,7 @@ package com.jpa.demo.entity.solution;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -9,16 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
 @NoArgsConstructor
 public class Academy {
 
     @Id @GeneratedValue
     private Long id;
 
-//    @OneToMany (cascade = CascadeType.ALL , mappedBy = "academy")
-    @OneToMany (cascade = CascadeType.ALL)
-    @JoinColumn(name = "academy_id")
+    @OneToMany (cascade = CascadeType.ALL , mappedBy = "academy")
+//    @OneToMany (cascade = CascadeType.ALL)
+//    @JoinColumn(name = "academy_id")
     private List<Subject> subjects = new ArrayList<>();
 
     private String name;

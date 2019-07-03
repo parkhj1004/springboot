@@ -16,7 +16,7 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: auto
 #    hibernate:
 #      dialec: org.hibernate.dialect.PostgreSQL94Dialect
     database-platform: org.hibernate.dialect.PostgreSQLDialect
